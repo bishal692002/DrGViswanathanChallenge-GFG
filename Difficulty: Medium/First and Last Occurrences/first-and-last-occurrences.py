@@ -4,18 +4,19 @@ class Solution:
     def find(self, arr, x):
         first = 0
         last = 0
-        found = False 
+        found = -1  
 
         for i in range(len(arr)):
             if arr[i] == x:
-                if not found:
+                if found == -1:
                     first = i
-                    found = True
                 last = i
+                found = 1  
 
-        if not found:
-            return [-1, -1]  
+        if found == -1:
+            return [-1, -1]
         return [first, last]
+
 
 
 #{ 
