@@ -16,4 +16,10 @@ class Solution:
             if xx != -1 and yy != -1:
                 mini = min(mini, abs(yy - xx))
                 
-        return mini if mini != float('inf') else -1
+        if mini != float('inf'):
+            return mini
+        
+        else:
+            return -1
+        
+        
