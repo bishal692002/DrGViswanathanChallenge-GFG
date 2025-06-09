@@ -1,0 +1,24 @@
+class Solution:
+    def maxLen(self, arr):
+        mx=0
+        sm=0
+        seen={0:-1}
+        for ix,ve in enumerate(arr):
+            sm+=ve
+            if sm in seen:
+                mx=max(mx,ix-seen[sm])
+            if sm not in seen:
+                seen[sm]=ix
+        return mx
+
+#{ 
+ # Driver Code Starts
+if __name__ == '__main__':
+    t = int(input())
+    for i in range(t):
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        print(ob.maxLen(arr))
+        print("~")
+
+# } Driver Code Ends
