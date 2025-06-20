@@ -12,5 +12,5 @@ class Solution:
             n = n // 10
         if result == temp:
             return True
-        else:
-            return False
+        
+        return False
