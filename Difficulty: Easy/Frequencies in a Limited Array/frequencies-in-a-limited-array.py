@@ -2,16 +2,15 @@ class Solution:
     
     def frequencyCount(self, arr):
         freq = {}
-        for num in arr:
-            if num in freq:
-                freq[num] += 1
+        for _ in arr:
+            if _ in freq:
+                freq[_] += 1
             else:
-                freq[num] = 1
+                freq[_] = 1
         
         result = []
         
-        for i in range(1,len(arr)+1):
-            # for num in result:
+        for _ in range(1,len(arr)+1):
             if i in freq:
                 result.append(freq[i])
             else:
