@@ -11,14 +11,3 @@ class Solution:
                 seen[sm]=ix
         return mx
 
-#{ 
- # Driver Code Starts
-if __name__ == '__main__':
-    t = int(input())
-    for i in range(t):
-        arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        print(ob.maxLen(arr))
-        print("~")
-
-# } Driver Code Ends
